@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;700&display=swap');
+:root{
+    --main-bg-color: #272727;
+    --main-graph-color: #e60049;
+    --border-grid-color: #747474;
+    --font-color: #a0a0a0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--main-bg-color);
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    padding: 40px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+}
+
+.container-grid-item{
+    border: 1px solid var(--border-grid-color);
+    border-radius: 2px;
+    color: var(--border-grid-color);
+}
+
+#graph-div { 
+    grid-area: 1 / 1 / 6 / 6; 
+    display: grid;
+    place-items: center;
+}
+
+#chart{
+    width: 80%;
+    height: 90%;
+    border: 1px solid red;
+}
+
+#setting-div { 
+    grid-area: 1 / 6 / 6 / 8; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#setting-div .setting-number-input {
+    background-color: transparent;
+    border: none;
+    width: 40%;
+    height: 10%;
+    font-size: 48px;
+    color: var(--font-color);
+    border-bottom: 1px solid white;
+    text-align: center;
+}
+
+.setting-number-input:focus{
+    outline: none;
+}
+
+#moreinfo-div { 
+    grid-area: 6 / 1 / 8 / 8; 
+    overflow: auto;
+}
+
